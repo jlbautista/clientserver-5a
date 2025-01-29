@@ -17,5 +17,12 @@
   "bugs": {
     "url": "https://github.com/jlbautista/clientserver-5a/issues"
   },
-  "homepage": "https://github.com/jlbautista/clientserver-5a#readme"
+  "homepage": "https://github.com/jlbautista/clientserver-5a#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "body-parser": "^1.20.3",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mysql": "^2.18.1"
+  }
 }
