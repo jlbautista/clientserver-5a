@@ -1,0 +1,21 @@
+{
+  "name": "clientserver-5a",
+  "version": "1.0.0",
+  "description": "Created for educational purposes - (C) UNIPOLI ISW 2025",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jlbautista/clientserver-5a.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/jlbautista/clientserver-5a/issues"
+  },
+  "homepage": "https://github.com/jlbautista/clientserver-5a#readme"
+}
