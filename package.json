@@ -4,6 +4,7 @@
   "description": "Created for educational purposes - (C) UNIPOLI ISW 2025",
   "main": "index.js",
   "scripts": {
+    "start": "node app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
