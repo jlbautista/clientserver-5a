@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const { sequelize } = require("./models");
+const authRoutes = require("./routes/authRoutes");
 const userRoutes = require("./routes/userRoutes");
 
 const app = express();
@@ -23,12 +24,16 @@ sequelize
     .catch((err) => console.error("Database sync error:", err));
 
 // Routes
+app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 
 // Error handling middleware
 app.use((err, req, res, next) => {
     console.error(err.stack);
-    res.status(500).json({ success: false, message: "Something went wrong!" });
+    res.status(500).json({ 
+        success: false, 
+        message: "Something went wrong!" 
+    });
 });
 
 const PORT = process.env.PORT || 3000;

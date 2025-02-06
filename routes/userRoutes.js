@@ -1,15 +1,15 @@
 const express = require('express');
 const router = express.Router();
-const {
-    createUser,
-    getUsers,
-    updateUser,
-    deleteUser
-} = require('../controllers/userController');
+const { authenticate, authorizeAdmin } = require('../middlewares/auth');
+const userController = require('../controllers/userController');
 
-router.post('/', createUser);
-router.get('/', getUsers);
-router.put('/:id', updateUser);
-router.delete('/:id', deleteUser);
+// Protect all routes after this middleware
+router.use(authenticate);
+
+// Only admin have permission to access these routes
+router.post('/', authorizeAdmin, userController.createUser);
+router.get('/', authorizeAdmin, userController.getUsers);
+router.put('/:id', userController.updateUser);
+router.delete('/:id', userController.deleteUser);
 
 module.exports = router;
